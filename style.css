@@ -21,6 +21,8 @@ body{
   grid-template-columns: 285px 445px;
   grid-template-rows: 280px;
 
+  background: #FFFFFF;
+
   box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
   border-radius: 10px;
 }
@@ -41,9 +43,13 @@ body{
 
 .card__info{
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;   
+  width: 100%;
+  height: 100%;
+}
 
-  padding: 32px 40px;  
+.card__texts-container{
+  padding: 32px 40px 0 40px;
 }
 
 .card__primary-text{
@@ -74,6 +80,10 @@ body{
   align-items: center;
 
   position: relative;
+
+  z-index: 0;
+
+  padding: 0 40px;  
 }
 
 .profile__container{
@@ -111,10 +121,19 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 
 .profile__share-btn:hover{
   background: #cad1d7;
+}
+
+.profile__share-btn--active{
+  background: #6E8098;
+}
+
+.share-btn__path--active{  
+  fill: #fff;
 }
 
 .profile__share-dialog{
@@ -131,8 +150,15 @@ body{
   gap: 16px;
 
   position: absolute;
-  top: -80px;
-  right: -108px;
+  top: -70px;
+  right: -68px;
+  z-index: 2;
+
+  display: none;
+}
+
+.profile__share-dialog--active{
+  display: flex;
 }
 
 .share-dialog__primary-text{
@@ -151,8 +177,62 @@ body{
 .share-dialog__triangle{  
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 18px solid #48556A;  
+  border-top: 20px solid #48556A;  
 
   position: absolute;
   bottom: -18px;
+}
+
+@media screen and (max-width: 883px){
+  .card{
+    grid-template-columns: 327px;
+    grid-template-rows: 200px 312px;
+  }
+
+  .card__image{  
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card__texts-container{
+    padding: 36px 32px 0 32px;
+  }
+
+  .card__profile{    
+    padding: 0 32px;
+    width: 100%;        
+    height: 100%;
+  }
+
+  .card__primary-text{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  .profile__share-dialog{             
+    width: 100%;  
+    height: 100%;  
+    justify-content: flex-start;
+    padding: 0 32px;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;    
+
+    box-shadow: unset;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .share-dialog__triangle{
+    display: none;
+  }
+}
+
+@media screen and (max-height: 526px) and (max-width: 883px){
+  body{
+    padding: 20px 0;
+    height: 100%;
+  }
 }

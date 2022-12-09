@@ -20,12 +20,17 @@
   <article class="card">
     <img class="card__image" src="./images/drawers.jpg" alt="drawers">
     <div class="card__info">
-      <h1 class="card__primary-text">Shift the overall look and feel by adding these wonderful touches to furniture in
-        your home</h1>
-      <p class="card__secondary-text">Ever been in a room and felt like something was missing? Perhaps it felt slightly
-        bare and uninviting. I’ve got
-        some simple tips to help you make any room feel complete.</p>
+      <div class="card__texts-container">
+        <h1 class="card__primary-text">Shift the overall look and feel by adding these wonderful touches to furniture in
+          your home</h1>
+        <p class="card__secondary-text">Ever been in a room and felt like something was missing? Perhaps it felt
+          slightly
+          bare and uninviting. I’ve got
+          some simple tips to help you make any room feel complete.</p>
+      </div>
+
       <div class="card__profile">
+
         <div class="profile__container">
           <img class="profile__image" src="./images/avatar-michelle.jpg" alt="avatar michelle">
           <div class="profile__data">
@@ -33,9 +38,14 @@
             <p class="profile__date">28 Jun 2020</p>
           </div>
         </div>
+
         <button class="profile__share-btn">
-          <img src="./images/icon-share.svg" alt="share button">
+          <svg class="share-btn__image" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+            <path class="share-btn__path" fill="#6E8098"
+              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+          </svg>
         </button>
+
         <div class="profile__share-dialog">
           <span class="share-dialog__primary-text">SHARE</span>
           <img class="share-dialog__icon" src="./images/icon-facebook.svg" alt="share in facebook">
@@ -47,13 +57,7 @@
     </div>
   </article>
 
-  <!-- <div class="profile__share-dialog">
-    <span class="share-dialog__primary-text">SHARE</span>
-    <img class="share-dialog__icon" src="./images/icon-facebook.svg" alt="share in facebook">
-    <img class="share-dialog__icon" src="./images/icon-twitter.svg" alt="share in twitter">
-    <img class="share-dialog__icon" src="./images/icon-pinterest.svg" alt="share in pinterest">
-    <div class="share-dialog__triangle"></div>
-  </div> -->
+  <script src="index.js"></script>
 </body>
 
 </html>
