@@ -3,3 +3,156 @@
   padding: 0;  
   box-sizing: border-box;
 }
+
+body{
+  background-color: #F2F2F2;
+  font-family: "Manrope";
+  
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  display: grid;
+  grid-template-columns: 285px 445px;
+  grid-template-rows: 280px;
+
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+  border-radius: 10px;
+}
+
+.card__image{
+  width: 100%;
+  height: 100%;  
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+
+.profile__image{
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.card__info{
+  display: flex;
+  flex-direction: column; 
+
+  padding: 32px 40px;  
+}
+
+.card__primary-text{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px; 
+  letter-spacing: 0.25px;
+  color: #48556A;
+}
+
+.card__secondary-text{
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.121875px;
+  color: #6E8098;
+
+  margin-top: 12px;
+}
+
+.card__profile{
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+
+  display: flex;  
+  justify-content: space-between; 
+  align-items: center;
+
+  position: relative;
+}
+
+.profile__container{
+  display: flex;
+}
+
+.profile__data{
+  margin-left: 16px;
+}
+
+.profile__name{
+  font-weight: 700;
+  font-size: 13px;  
+  line-height: 20px;
+  letter-spacing: 0.121875px;
+  color: #48556A;
+}
+
+.profile__date{
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.121875px;
+  color: #9DAEC2;
+}
+
+.profile__share-btn{
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #e0e5e9;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__share-btn:hover{
+  background: #cad1d7;
+}
+
+.profile__share-dialog{
+  width: 248px;
+  height: 55px;
+  
+  background: #48556A;
+  box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);    
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  position: absolute;
+  top: -80px;
+  right: -108px;
+}
+
+.share-dialog__primary-text{
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 5px;
+  color: #9DAEC2;
+  margin-right: 5px;
+}
+
+.share-dialog__icon{
+  cursor: pointer;  
+}
+
+.share-dialog__triangle{  
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 18px solid #48556A;  
+
+  position: absolute;
+  bottom: -18px;
+}
